@@ -1,6 +1,5 @@
 # Servidores Node
 
-<br />
 
 **Tomando con base el proyecto que vamos realizando, agregar un parámetro más en la ruta de comando que permita ejecutar al servidor en modo fork o cluster. Dicho parámetro será 'FORK' en el primer caso y 'CLUSTER' en el segundo, y de no pasarlo, el servidor iniciará en modo fork.**<br />
 
@@ -20,7 +19,6 @@ Los scripts que use son los siguientes:<br />
   "pm2cluster": "pm2 start server.js --name='server' --watch -i max -- 8080"
 }
 ```
-<br />
 
 ###### Inicializar la app en modo standard:<br />
 ```npm start``` -> Corre el código ```node server.js```<br />
@@ -59,6 +57,8 @@ etc..
 ```npm run cluster``` -> Corre el código ```nodemon server.js```, y pasa **cluster** como **npm_lifecycle_event**.
 Levanta un PID master que lo muestra x consola y (en mi caso) 8 workers.
 http://localhost:8080/cluster
+
+<hr />
 
 **Ejecutar el servidor (con los parámetros adecuados) utilizando Forever, verificando su correcta operación. Listar los procesos por Forever y por sistema operativo.**<br />
 "npm run forever" -> Corre el código "forever start -w server.js".
@@ -107,6 +107,6 @@ Al cerrar el proceso de la aplicacion abre un proceso nuevo.<br />
 
 <hr />
 
-**NOTA:
+**NOTA:<br />
 Es probable que en el caso de tener activo el child process fork (realizado en el entregable anterior) aparezcan más procesos de node activos que la cantidad esperada. Desactivar el código del fork y su endpoint '/randoms' y verificar que ahora la cantidad de procesos de node corresponda.**<br />
 Anule la ruta `/randoms` para evitar problemas con lo la cantidad de procesos.
