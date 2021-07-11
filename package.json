@@ -1,0 +1,36 @@
+{
+  "name": "desafio_26",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "startFB": "node server.js 559885825005670 6a2926fd1ded556381f2275ddfbee1f2",
+    "fork": "nodemon server.js",
+    "cluster": "nodemon server.js",
+    "forever": "forever start -w server.js",
+    "pm2fork": "pm2 start server.js --name='server' --watch",
+    "pm2cluster": "pm2 start server.js --name='server' --watch -i max -- 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cluster": "^0.7.7",
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mongoose": "^5.12.15",
+    "node-fetch": "^2.6.1",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.1.2"
+  }
+}

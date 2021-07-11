@@ -1,0 +1,33 @@
+
+<h5>Argumentos de entrada</h5>
+<ul>
+	{{#each process.argv}}
+		<li>{{this}}</li>
+	{{/each}}
+</ul>
+<hr />
+<h5>Número de CPUs</h5>
+<p>{{numCPUs}}</p>
+<hr />
+<h5>Nombre de la plataforma (sistema operativo)</h5>
+<p>{{process.platform}}</p>
+<hr />
+<h5>Versión de node.js</h5>
+<p>{{process.version}}</p>
+<hr />
+<h5>Uso de memoria</h5>
+<ul>
+	{{#each memoria}}
+		<li>Memoria: <span class="text-info">{{this}}</span></li>
+	{{/each}}
+</ul>
+<hr />
+<h5>Path de ejecución</h5>
+<p>{{process.execPath}}</p>
+<hr />
+<h5>Process ID</h5>
+<p>{{process.pid}}</p>
+<hr />
+<h5>Carpeta corriente</h5>
+{{path}}
+<hr />
